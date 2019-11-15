@@ -1,6 +1,3 @@
-# TwistNumber
-calculating twist number for 3D vector field
-
 The program main.f90 is the main program.
 This program is used for calculating the squashing factor Q.
 The method is proposed by Pariat & Demoulin 2012.
@@ -72,7 +69,11 @@ the format of the par file is namelist in fortran, e.g.,
 
 8   the test dir contains a simple field that you can try, I use a simply current file that J = 0.5*B,
     so that the twist number you get should be same as field line length, except a constant 0.5.
+
 In addition:
+
 This parallel version is based on FORTRAN OPENMP.
+
 If one want to use N threads for the calculation, just change the value of parameter 'nthreads' in parameter file. If this parameter is defined as 0, then the max number of threads in the computer will be used as default.
+
 The field line integral method is Runge-Kutta 4(5).
